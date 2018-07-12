@@ -3,8 +3,7 @@ use
 select distinct 
   presentAdmit.PatientSID,
   patient.PatientSSN,
-  patient.PatientFirstName,
-  patient.PatientLastName,
+  patient.PatientName,
   patient.DeceasedFlag,
   patient.DeathDateTime,
   cast(inpat.AdmitDateTime as date) as AdmitDate,
