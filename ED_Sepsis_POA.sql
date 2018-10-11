@@ -24,8 +24,8 @@ from
 where
   patient.Sta3n = '612'
   and patient.CDWPossibleTestPatientFlag <> 'y'
-  and presentAdmit.PresentOnAdmissionCode = 'Y' 
-  and inpat.AdmitDateTime >= Dateadd(d, -30, getdate()) 
+  --and presentAdmit.PresentOnAdmissionCode = 'Y' 
+  and inpat.AdmitDateTime >= Dateadd(d, -90, getdate()) 
   and (icd10.ICD10Code like ('[A][0-9][0-9]%') 
     OR icd10.ICD10Code like ('R78.81') 
     OR icd10.ICD10Code like ('B37.%')
